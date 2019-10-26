@@ -6,7 +6,10 @@ import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
 import android.widget.VideoView
 import android.widget.MediaController
+import android.widget.HorizontalScrollView
+
 import android.net.Uri
+import android.view.View
 import android.widget.ProgressBar
 
 
@@ -20,6 +23,7 @@ class MainActivity : AppCompatActivity() {
     private var uri: Uri? = null
     private var isContinuously = false
     private var stopPosition = 0
+    private var horizontalScrollViewComp: HorizontalScrollView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,6 +33,7 @@ class MainActivity : AppCompatActivity() {
 
         videoView = findViewById(R.id.videoView) as VideoView
 
+        horizontalScrollViewComp = findViewById(R.id.horizontalScrollView)
 
         mediaController = MediaController(this)
         mediaController?.setAnchorView(videoView)
@@ -52,6 +57,7 @@ class MainActivity : AppCompatActivity() {
                 if(videoView!!.getCurrentPosition() > 0){
                     videoView!!.seekTo(stopPosition)
                     videoView!!.start()
+                    //horizontalScrollViewComp
 
                 } else{
                     videoView!!.start()
