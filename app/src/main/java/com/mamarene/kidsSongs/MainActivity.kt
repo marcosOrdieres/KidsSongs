@@ -7,10 +7,12 @@ import kotlinx.android.synthetic.main.activity_main.*
 import android.widget.VideoView
 import android.widget.MediaController
 import android.widget.HorizontalScrollView
-
+import android.view.View.GONE
+import android.view.View.VISIBLE
 import android.net.Uri
 import android.view.View
 import android.widget.ProgressBar
+import core.onEndScroll
 
 
 
@@ -47,6 +49,22 @@ class MainActivity : AppCompatActivity() {
             mediaPlayer?.start()
         }
 
+        if(!videoView!!.isPlaying){
+            videoView!!.visibility = View.INVISIBLE
+        }
+        arrowLeft?.visibility = GONE
+
+
+        horizontalScrollView.onEndScroll({
+            arrowRight.visibility = VISIBLE
+            arrowLeft?.visibility = GONE
+        }) {
+            arrowRight.visibility = GONE
+            arrowLeft.visibility = VISIBLE
+
+        }
+
+
 
         imageButtonFirst.setOnClickListener{
             if (!isContinuously) {
@@ -57,9 +75,16 @@ class MainActivity : AppCompatActivity() {
                 if(videoView!!.getCurrentPosition() > 0){
                     videoView!!.seekTo(stopPosition)
                     videoView!!.start()
-                    //horizontalScrollViewComp
+
+                    horizontalScrollViewComp!!.removeAllViews()
 
                 } else{
+                    videoView!!.visibility = View.VISIBLE
+                    arrowRight?.visibility = GONE
+                    arrowLeft?.visibility = GONE
+
+
+                    horizontalScrollViewComp!!.removeAllViews()
                     videoView!!.start()
                 }
 

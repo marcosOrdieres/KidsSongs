@@ -1,12 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <android.support.constraint.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/back"
+        android:id="@+id/backgroundImage"
+        android:background="@drawable/splash_back"
         tools:context=".MainActivity">
+
+    <Button
+            android:id="@+id/arrowRight"
+            android:layout_width="101dp"
+            android:layout_height="67dp"
+            android:background="@drawable/right"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.94"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.85" />
+
+    <Button
+            android:id="@+id/arrowLeft"
+            android:layout_width="113dp"
+            android:layout_height="54dp"
+            android:background="@drawable/left"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.05"
+            app:layout_constraintStart_toStartOf="@+id/videoView"
+            app:layout_constraintTop_toTopOf="@+id/videoView"
+            app:layout_constraintVertical_bias="0.84000003"
+            tools:visibility="visible" />
+
 
     <VideoView
             android:id="@+id/videoView"
@@ -18,6 +46,7 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
+            android:visibility="invisible"
             tools:layout_editor_absoluteY="50dp" />
 
     <HorizontalScrollView
@@ -25,14 +54,14 @@
             android:layout_width="731dp"
             android:layout_height="match_parent"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="16dp">
+            tools:layout_editor_absoluteY="-34dp">
 
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50dp"
-                android:gravity="start"
                 android:descendantFocusability="blocksDescendants"
+                android:gravity="start"
                 android:orientation="horizontal">
 
             <Button
@@ -65,11 +94,9 @@
                     android:text="holaaaa" />
 
 
-
         </LinearLayout>
 
     </HorizontalScrollView>
-
 
 
 </android.support.constraint.ConstraintLayout>
