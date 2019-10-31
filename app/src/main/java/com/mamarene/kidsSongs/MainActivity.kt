@@ -8,6 +8,7 @@ import android.view.View.GONE
 import android.view.View.VISIBLE
 import android.widget.MediaController
 import core.onEndScroll
+
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -32,17 +33,21 @@ class MainActivity : AppCompatActivity() {
         val uriPath = ("android.resource://" + packageName + "/" + R.raw.shark)
         uri = Uri.parse(uriPath)
         videoView!!.setVideoURI(uri)
-
+        arrowLeft?.visibility = GONE
 
         mediaPlayer?.setOnPreparedListener{
             mediaPlayer?.start()
         }
 
         horizontalScrollView.onEndScroll({
-            button.visibility = VISIBLE
+            arrowRight.visibility = VISIBLE
+            arrowLeft?.visibility = GONE
         }) {
-            button.visibility = GONE
+            arrowRight.visibility = GONE
+            arrowLeft.visibility = VISIBLE
+
         }
+
 
         imageButtonFirst.setOnClickListener{
             if (!isContinuously) {
