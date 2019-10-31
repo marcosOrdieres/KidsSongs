@@ -1,28 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <android.support.constraint.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:id="@+id/backgroundImage"
+        android:background="@drawable/splash_back"
         tools:context=".MainActivity">
 
-    <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hello World weeee!"
+    <Button
+            android:id="@+id/arrowRight"
+            android:layout_width="101dp"
+            android:layout_height="67dp"
+            android:background="@drawable/right"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.94"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.85" />
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:id="@+id/rootRL"
-            android:orientation="vertical"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:background="@drawable/back">
-    </RelativeLayout>
+    <Button
+            android:id="@+id/arrowLeft"
+            android:layout_width="113dp"
+            android:layout_height="54dp"
+            android:background="@drawable/left"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.05"
+            app:layout_constraintStart_toStartOf="@+id/videoView"
+            app:layout_constraintTop_toTopOf="@+id/videoView"
+            app:layout_constraintVertical_bias="0.84000003"
+            tools:visibility="visible" />
+
+
+    <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteY="50dp" />
+
+    <HorizontalScrollView
+            android:id="@+id/horizontalScrollView"
+            android:layout_width="731dp"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="-34dp">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:descendantFocusability="blocksDescendants"
+                android:gravity="start"
+                android:orientation="horizontal">
+
+            <Button
+                    android:id="@+id/imageButtonFirst"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:layout_margin="25dp"
+                    android:background="@drawable/gallina"
+                    android:text="holaaaa" />
+
+            <Button
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:layout_margin="25dp"
+                    android:background="@drawable/gallina"
+                    android:text="holaaaa" />
+
+            <Button
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:layout_margin="25dp"
+                    android:background="@drawable/gallina"
+                    android:text="holaaaa" />
+
+            <Button
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:layout_margin="25dp"
+                    android:background="@drawable/gallina"
+                    android:text="holaaaa" />
+
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
 
 </android.support.constraint.ConstraintLayout>
