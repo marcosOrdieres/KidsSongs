@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.constraint.ConstraintLayout
+<androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
@@ -9,6 +9,7 @@
         android:id="@+id/backgroundImage"
         android:background="@drawable/splash_back"
         tools:context=".MainActivity">
+
 
     <Button
             android:id="@+id/arrowRight"
@@ -20,19 +21,19 @@
             app:layout_constraintHorizontal_bias="0.94"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.85" />
+            app:layout_constraintVertical_bias="0.98" />
 
     <Button
             android:id="@+id/arrowLeft"
-            android:layout_width="113dp"
-            android:layout_height="54dp"
+            android:layout_width="112dp"
+            android:layout_height="71dp"
             android:background="@drawable/left"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.05"
             app:layout_constraintStart_toStartOf="@+id/videoView"
             app:layout_constraintTop_toTopOf="@+id/videoView"
-            app:layout_constraintVertical_bias="0.84000003"
+            app:layout_constraintVertical_bias="0.98"
             tools:visibility="visible" />
 
 
@@ -51,7 +52,7 @@
 
     <HorizontalScrollView
             android:id="@+id/horizontalScrollView"
-            android:layout_width="731dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             app:layout_constraintStart_toStartOf="parent"
             tools:layout_editor_absoluteY="-34dp">
@@ -60,43 +61,132 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50dp"
+
                 android:descendantFocusability="blocksDescendants"
                 android:gravity="start"
                 android:orientation="horizontal">
 
-            <Button
-                    android:id="@+id/imageButtonFirst"
+            <LinearLayout
+                    android:id="@+id/firstView"
                     android:layout_width="180dp"
-                    android:layout_height="180dp"
+                    android:layout_height="220dp"
+                    android:layout_gravity="center"
                     android:layout_margin="25dp"
-                    android:background="@drawable/gallina"
-                    android:text="holaaaa" />
+                    android:gravity="center_vertical|left"
+                    android:orientation="vertical">
 
-            <Button
-                    android:layout_width="180dp"
-                    android:layout_height="180dp"
-                    android:layout_margin="25dp"
-                    android:background="@drawable/gallina"
-                    android:text="holaaaa" />
+                <Button
+                        android:id="@+id/imageButtonFirst"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:background="@drawable/gallina"/>
 
-            <Button
-                    android:layout_width="180dp"
-                    android:layout_height="180dp"
-                    android:layout_margin="25dp"
-                    android:background="@drawable/gallina"
-                    android:text="holaaaa" />
+                <TextView
+                        android:id="@+id/textViewFirst"
+                        android:layout_width="180dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:text="TextView First"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            </LinearLayout>
 
-            <Button
+
+            <LinearLayout
+                    android:id="@+id/secondView"
                     android:layout_width="180dp"
-                    android:layout_height="180dp"
+                    android:layout_height="220dp"
+                    android:layout_gravity="center"
                     android:layout_margin="25dp"
-                    android:background="@drawable/gallina"
-                    android:text="holaaaa" />
+                    android:gravity="center_vertical|left"
+                    android:orientation="vertical">
+
+                <Button
+                        android:id="@+id/imageButtonSecond"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:background="@drawable/gallina" />
+
+                <TextView
+                        android:id="@+id/textViewSecond"
+                        android:layout_width="180dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:text="TextView Second"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/thirdView"
+                    android:layout_width="180dp"
+                    android:layout_height="220dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="25dp"
+                    android:gravity="center_vertical|left"
+                    android:orientation="vertical">
+
+                <Button
+                        android:id="@+id/imageButtonThird"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:background="@drawable/gallina" />
+
+                <TextView
+                        android:id="@+id/textViewThird"
+                        android:layout_width="180dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:text="TextView Third"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/fourthView"
+                    android:layout_width="180dp"
+                    android:layout_height="220dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="25dp"
+                    android:gravity="center_vertical|left"
+                    android:orientation="vertical">
+
+                <Button
+                        android:id="@+id/imageButtonFourth"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:background="@drawable/gallina" />
+
+                <TextView
+                        android:id="@+id/textViewFourth"
+                        android:layout_width="180dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:text="TextView Fourth"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            </LinearLayout>
 
 
         </LinearLayout>
 
     </HorizontalScrollView>
 
+    <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            app:adSize="BANNER"
+            app:adUnitId="ca-app-pub-3940256099942544/6300978111"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/videoView"
+            app:layout_constraintVertical_bias="1.0">
 
-</android.support.constraint.ConstraintLayout>
+    </com.google.android.gms.ads.AdView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
