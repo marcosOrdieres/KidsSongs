@@ -12,6 +12,18 @@
 
 
     <Button
+            android:id="@+id/goBack"
+            android:layout_width="72dp"
+            android:layout_height="71dp"
+            android:background="@drawable/back_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/videoView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.02"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/videoView"
+            app:layout_constraintVertical_bias="0.02" />
+
+    <Button
             android:id="@+id/arrowRight"
             android:layout_width="101dp"
             android:layout_height="67dp"
@@ -69,7 +81,7 @@
             <LinearLayout
                     android:id="@+id/firstView"
                     android:layout_width="180dp"
-                    android:layout_height="220dp"
+                    android:layout_height="240dp"
                     android:layout_gravity="center"
                     android:layout_margin="25dp"
                     android:gravity="center_vertical|left"
@@ -79,7 +91,7 @@
                         android:id="@+id/imageButtonFirst"
                         android:layout_width="180dp"
                         android:layout_height="180dp"
-                        android:background="@drawable/gallina"/>
+                        android:background="@drawable/gallina" />
 
                 <TextView
                         android:id="@+id/textViewFirst"
@@ -87,7 +99,7 @@
                         android:layout_height="30dp"
                         android:layout_weight="0.5"
                         android:gravity="center"
-                        android:text="TextView First"
+                        android:text="La Gallina Turuleca"
                         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
             </LinearLayout>
 
@@ -95,7 +107,7 @@
             <LinearLayout
                     android:id="@+id/secondView"
                     android:layout_width="180dp"
-                    android:layout_height="220dp"
+                    android:layout_height="240dp"
                     android:layout_gravity="center"
                     android:layout_margin="25dp"
                     android:gravity="center_vertical|left"
@@ -105,7 +117,7 @@
                         android:id="@+id/imageButtonSecond"
                         android:layout_width="180dp"
                         android:layout_height="180dp"
-                        android:background="@drawable/gallina" />
+                        android:background="@drawable/bruja" />
 
                 <TextView
                         android:id="@+id/textViewSecond"
@@ -113,14 +125,14 @@
                         android:layout_height="30dp"
                         android:layout_weight="0.5"
                         android:gravity="center"
-                        android:text="TextView Second"
+                        android:text="La Bruja Loca"
                         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
             </LinearLayout>
 
             <LinearLayout
                     android:id="@+id/thirdView"
                     android:layout_width="180dp"
-                    android:layout_height="220dp"
+                    android:layout_height="240dp"
                     android:layout_gravity="center"
                     android:layout_margin="25dp"
                     android:gravity="center_vertical|left"
@@ -130,7 +142,7 @@
                         android:id="@+id/imageButtonThird"
                         android:layout_width="180dp"
                         android:layout_height="180dp"
-                        android:background="@drawable/gallina" />
+                        android:background="@drawable/rana" />
 
                 <TextView
                         android:id="@+id/textViewThird"
@@ -138,14 +150,14 @@
                         android:layout_height="30dp"
                         android:layout_weight="0.5"
                         android:gravity="center"
-                        android:text="TextView Third"
+                        android:text="CuCu, Cantaba la rana"
                         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
             </LinearLayout>
 
             <LinearLayout
                     android:id="@+id/fourthView"
                     android:layout_width="180dp"
-                    android:layout_height="220dp"
+                    android:layout_height="240dp"
                     android:layout_gravity="center"
                     android:layout_margin="25dp"
                     android:gravity="center_vertical|left"
@@ -155,7 +167,7 @@
                         android:id="@+id/imageButtonFourth"
                         android:layout_width="180dp"
                         android:layout_height="180dp"
-                        android:background="@drawable/gallina" />
+                        android:background="@drawable/pollitos_dicen" />
 
                 <TextView
                         android:id="@+id/textViewFourth"
@@ -163,7 +175,107 @@
                         android:layout_height="30dp"
                         android:layout_weight="0.5"
                         android:gravity="center"
-                        android:text="TextView Fourth"
+                        android:text="Los Pollitos dicen pio pio"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/fifthView"
+                    android:layout_width="180dp"
+                    android:layout_height="240dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="25dp"
+                    android:gravity="center_vertical|left"
+                    android:orientation="vertical">
+
+                <Button
+                        android:id="@+id/imageButtonFifth"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:background="@drawable/nana" />
+
+                <TextView
+                        android:id="@+id/textViewFifth"
+                        android:layout_width="180dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:text="Duerme bebe"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/fifthSix"
+                    android:layout_width="180dp"
+                    android:layout_height="240dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="25dp"
+                    android:gravity="center_vertical|left"
+                    android:orientation="vertical">
+
+                <Button
+                        android:id="@+id/imageButtonSix"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:background="@drawable/sun" />
+
+                <TextView
+                        android:id="@+id/textViewSix"
+                        android:layout_width="180dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:text="Sol Solito"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/fifthSeven"
+                    android:layout_width="180dp"
+                    android:layout_height="240dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="25dp"
+                    android:gravity="center_vertical|left"
+                    android:orientation="vertical">
+
+                <Button
+                        android:id="@+id/imageButtonSeven"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:background="@drawable/coche" />
+
+                <TextView
+                        android:id="@+id/textViewSeven"
+                        android:layout_width="180dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:text="Cocherito Lere"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/fifthEight"
+                    android:layout_width="180dp"
+                    android:layout_height="240dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="25dp"
+                    android:gravity="center_vertical|left"
+                    android:orientation="vertical">
+
+                <Button
+                        android:id="@+id/imageButtonEight"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:background="@drawable/bebe" />
+
+                <TextView
+                        android:id="@+id/textViewEight"
+                        android:layout_width="180dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:text="Nana para bebes"
                         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
             </LinearLayout>
 
